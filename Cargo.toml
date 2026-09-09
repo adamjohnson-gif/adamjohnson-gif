@@ -2,7 +2,7 @@
 # No Cargo.lock.
 [package]
 name = "adamjohnson-gif"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Adam Johnson <llamaguy82@gmail.com>"]
 edition = "2024"
 description = "Config files for my GitHub profile."
@@ -15,3 +15,5 @@ rustix = "1.1.4"
 validator = { version = "0.20", features = ["derive"] }
 anstyle = "1.0.14"
 iascii = { version = "0.1.1" }
+ffmpeg = "=0.2.0-alpha.1"
+yt-dlp = { version = "2.8.3", features = ["cache-memory", "cache-json", "cache-redb"] }
