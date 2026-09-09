@@ -4,7 +4,7 @@
 ![Last commit](https://img.shields.io/github/last-commit/adamjohnson-gif/adamjohnson-gif/main)
 ![Cargo version](https://img.shields.io/badge/Cargo-2024-orange)
 ![Check Cargo.lock](https://img.shields.io/badge/Has%20Cargo.lock%3F-no-red)
-![Why not](https://img.shields.io/badge/why%20not%3A%20Cargo.toml-has%20Cargo.toml%20at%20%2F-green)
+[![Why not](https://img.shields.io/badge/why%20not%3A%20Cargo.toml-has%20Cargo.toml%20at%20%2F-green)](Cargo.toml)
 
 Hi there! I am Adam.
 
