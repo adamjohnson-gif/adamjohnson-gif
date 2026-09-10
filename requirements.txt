@@ -1,4 +1,4 @@
-yt-dlp==2026.08.19
+yt-dlp
 pillow
-pandas>=2.0
-discord.py>=2.5.0
+pandas
+discord.py
