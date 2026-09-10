@@ -1,0 +1,39 @@
+name: Master Branch
+
+on:
+  workflow_dispatch: # Allows you to trigger this manually from the GitHub UI
+
+permissions:
+  contents: write # Crucial: Gives the workflow permission to push to the repo
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches all history so Git knows about existing branches
+
+      # Step 2: Initialize Git Config, Create Branch, and Push
+      - name: Initialize and Push New Branch
+        run: |
+          # 1. Configure Git with the automated GitHub Actions bot identity
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # 2. Define your new branch name (e.g., using a timestamp or dynamic variable)
+          BRANCH_NAME="feature/auto-branch-$(date +'%Y%m%d%H%M%S')"
+          echo "Creating and pushing branch: $BRANCH_NAME"
+          
+          # 3. Create and switch to the new branch
+          git checkout -b "$BRANCH_NAME"
+          
+          # 4. Make an optional change (e.g., an empty commit or tracking file)
+          # Git will not push an empty history unless specified, or unless you commit a file.
+          git commit --allow-empty -m "Initial commit for $BRANCH_NAME"
+          
+          # 5. Push the branch up to GitHub and track it
+          git push origin "$BRANCH_NAME"
