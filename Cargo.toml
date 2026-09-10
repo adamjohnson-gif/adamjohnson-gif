@@ -2,7 +2,7 @@
 # No Cargo.lock.
 [package]
 name = "adamjohnson-gif"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Adam Johnson <llamaguy82@gmail.com>"]
 edition = "2024"
 description = "Config files for my GitHub profile."
