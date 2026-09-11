@@ -1,0 +1,11 @@
+[package]
+name = "adamjohnson-rs
+version = "0.1.0"
+edition = "2024"
+authors = ["Adam Johnson <llamaguy82@gmail.com>"]
+description = "Config files for my GitHub profile."
+license = "GPL-3.0"
+
+[dependencies]
+valle-ffmpeg = "0.1.0"
+yt-dlp = "2.8.3"
